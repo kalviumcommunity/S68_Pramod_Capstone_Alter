@@ -7,7 +7,7 @@ This ride-sharing app is designed to offer convenient and efficient transportati
 - Frontend: React.js with Vite
 - Backend: Node.js with Express.js
 - Database: MongoDB
-A- uthentication: Firebase/Auth0
+- Authentication: Firebase/Auth0
 - Mapping & GPS: Google Maps API
 - Payments: Stripe/PayPal integration
 - Deployment:
@@ -17,8 +17,8 @@ A- uthentication: Firebase/Auth0
 ### Key Features
 1. User Authentication & Profiles - Riders and drivers can create accounts via email, and phone. 
 2. Real-Time Ride Matching - GPS-based ride requests that match riders with the nearest available driver. 
-Fare Calculation & Payment Integration - Distance and demand-based dynamic pricing. 
-Ratings System - User ratings for both drivers and riders.
+3. Fare Calculation & Payment Integration - Distance and demand-based dynamic pricing. 
+4. Ratings System - User ratings for both drivers and riders.
 
 ### Daily Plan 
 - Day 1: Came up with the idea.
