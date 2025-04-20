@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const userRouter = Router();
-const jwt = require("jsonwwebtoken");
+const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const userModel = require("../models/userModel");
 
@@ -10,7 +10,7 @@ require("dotenv").config({
 
 const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
 
-userRouter.post("create-user", async (request, response) => {
+userRouter.post("/create-user", async (request, response) => {
     const { password } = request.body;
 
     const saltRounds = 10;

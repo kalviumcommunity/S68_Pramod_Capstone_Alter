@@ -25,7 +25,6 @@ const User = new mongoose.Schema({
         licenseNumber: { type: String },
         vehicleModel: { type: String },
         vehicleNumberPlate: { type: String },
-
     },
     currentLocation: {
         type: {
@@ -66,6 +65,6 @@ const User = new mongoose.Schema({
     },
 })
 
-const userSchema = new mongoose.model("User", User)
+const userSchema = mongoose.model("User", User)
 
 module.exports = userSchema;
