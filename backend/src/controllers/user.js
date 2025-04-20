@@ -35,3 +35,5 @@ userRouter.post("/create-user", async (request, response) => {
         });
     }
 })
+
+module.exports = userRouter;
