@@ -25,7 +25,6 @@ userRouter.post("/create-user", async (request, response) => {
 
         return response.status(200).json({
             message: "user successfully created",
-            user: newUser,
         });
     }
     catch (error) {
