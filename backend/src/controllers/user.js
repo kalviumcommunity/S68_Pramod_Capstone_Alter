@@ -33,7 +33,7 @@ userRouter.get('/get-one-user', async (request, response) => {
 
         if (!email) {
             return response.status(400).json({ 
-                message: 'Email is required!' 
+                message: 'email is required!' 
             });
         }
 
@@ -41,7 +41,7 @@ userRouter.get('/get-one-user', async (request, response) => {
 
         if (!user) {
             return response.status(404).json({ 
-                message: 'User not found!' 
+                message: 'user not found!' 
             });
         }
 
