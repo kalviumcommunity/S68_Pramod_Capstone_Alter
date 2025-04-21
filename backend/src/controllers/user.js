@@ -119,7 +119,8 @@ userRouter.put('/update-address', async (request, response) => {
     catch (error) {
         console.error(error);
         response.status(500).json({ 
-            message: 'internal server error', error 
+            message: 'internal server error', 
+            error: error, 
         });
     }
 });
