@@ -10,6 +10,23 @@ require("dotenv").config({
 
 const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
 
+userRouter.get("/get-user", async (request, response) => {
+    try {
+        const users = await userModel.find();
+
+        return response.status(200).json({
+            message: "users successfully retrieved",
+            users: users,
+        })
+    }
+    catch (error) {
+        return response.status(500).json({
+            message: "error retrieving users",
+            error: error,
+        })
+    }
+})
+
 userRouter.post("/create-user", async (request, response) => {
     const { password } = request.body;
 
