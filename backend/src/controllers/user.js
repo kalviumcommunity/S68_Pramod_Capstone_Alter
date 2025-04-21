@@ -84,4 +84,45 @@ userRouter.post("/create-user", async (request, response) => {
     }
 })
 
+userRouter.put('/update-address', async (request, response) => {
+    try {
+        const { email, addressIndex, newAddress } = request.body;
+
+        if (!email || !newAddress) {
+            return response.status(400).json({ 
+                message: 'email and new address are required.' 
+            });
+        }
+
+        const user = await userModel.findOne({ email });
+
+        if (!user) {
+            return response.status(404).json({
+                message: 'user not found.' 
+            });
+        }
+
+        if (addressIndex !== undefined && user.addresses[addressIndex]) {
+            user.addresses[addressIndex] = newAddress;
+        } 
+        else {
+            user.addresses.push(newAddress);
+        }
+
+        await user.save();
+
+        response.json({
+            message: 'address updated successfully!',
+            addresses: user.addresses,
+        });
+    } 
+    catch (error) {
+        console.error(error);
+        response.status(500).json({ 
+            message: 'internal server error', error 
+        });
+    }
+});
+
+
 module.exports = userRouter;
