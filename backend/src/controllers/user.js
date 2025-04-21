@@ -125,5 +125,74 @@ userRouter.put('/update-address', async (request, response) => {
     }
 });
 
+userRouter.put('/update-user', async (request, response) => {
+    try {
+        const { email, updates } = request.body;
+
+        if (!email || !updates) {
+            return response.status(400).json({ 
+                message: 'email and updates are required.' 
+            });
+        }
+
+        const updatedUser = await userModel.findOneAndUpdate(
+            { email },
+            { $set: updates },
+            { new: true }
+        );
+
+        if (!updatedUser) {
+            return response.status(404).json({ 
+                message: 'user not found.' 
+            });
+        }
+
+        const { password, ...userDetails } = updatedUser.toObject();
+        response.json({ 
+            message: 'user updated successfully', 
+            user: userDetails 
+        });
+    } 
+    catch (error) {
+        console.error(error);
+        response.status(500).json({ 
+            message: 'internal server error', 
+            error: error, 
+        });
+    }
+});
+
+
+userRouter.delete("/delete-user", async (request, response) => {
+    const { email } = request.body;
+
+    try {
+        if (!email) {
+            return response.status(400).json({ 
+                message: 'email is required.' 
+            });
+        }
+
+        const deletedUser = await userModel.findOneAndDelete({ email });
+
+        if (!deletedUser) {
+            return response.status(404).json({ 
+                message: 'user not found' 
+            });
+        }
+
+        response.json({ 
+            message: 'user deleted successfully' 
+        });
+    } 
+    catch (error) {
+        console.error(error);
+        response.status(500).json({ 
+            message: 'internal server error', 
+            error: error, 
+        });
+    }
+})
+
 
 module.exports = userRouter;
