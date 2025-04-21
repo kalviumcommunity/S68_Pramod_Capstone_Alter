@@ -27,6 +27,38 @@ userRouter.get("/get-user", async (request, response) => {
     }
 })
 
+userRouter.get('/get-one-user', async (request, response) => {
+    try {
+        const { email } = request.query;
+
+        if (!email) {
+            return response.status(400).json({ 
+                message: 'Email is required!' 
+            });
+        }
+
+        const user = await userModel.findOne({ email: email });
+
+        if (!user) {
+            return response.status(404).json({ 
+                message: 'User not found!' 
+            });
+        }
+
+        const { password, ...userDetails } = user.toObject();
+        response.json({ 
+            user: userDetails 
+        });
+    } 
+    catch (error) {
+        console.error(error);
+        response.status(500).json({ 
+            message: 'internal server error',
+            error: error, 
+        });
+    }
+});
+
 userRouter.post("/create-user", async (request, response) => {
     const { password } = request.body;
 
