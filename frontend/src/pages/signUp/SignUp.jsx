@@ -45,10 +45,6 @@ function SignUp() {
     const handleSignUpWithGoogle = async () => {
         console.log("Sign Up With Google In Progress");
     }
-
-    const handlePasswordVisibility = () => {
-        passwordVisibility === setPasswordVisibility(!passwordVisibility) 
-    }
     
     return (
         <>
@@ -56,7 +52,7 @@ function SignUp() {
                 <form onSubmit={submitHandler} className="signUpForm">
                     <h2> Sign Up </h2>
                     <label> Name: </label>
-                    <input type="text" name="name" className="signUpInputs" onChange={handleInputChange} />
+                    <input type="text" name="name" className="signUpInputs" onChange={(handleInputChange)} />
 
                     <label> Email: </label>
                     <input type="text" name="email" className="signUpInputs" onChange={handleInputChange} />
