@@ -2,10 +2,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid black;
+    height: 99.5vh;
 }
 
 .loginForm {
-    display: flex;
-    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    /* gap: 10px; */
     width: 20%;
+    /* border: 2px solid green; */
+    padding: 10px;
+}
+
+.loginForm input {
+    padding-left: 5px;
+    padding: 3px;
+    font-size: 0.8rem;
+}
+
+#inputMargins {
+    margin-bottom: 15px;
+}
+
+#forgotPassword {
+    text-align: center;
+    font-size: 0.7rem;
+    margin-bottom: 20px;
 }
