@@ -11,6 +11,7 @@ function SignUp() {
         confirmPassword: "",
         phoneNumber: "",
     })
+    const [passwordVisibility, setPasswordVisibility]= useState(false);
     
     const submitHandler = async (event) => {
         event.preventDefault();
@@ -40,28 +41,50 @@ function SignUp() {
             [e.target.name]: e.target.value,
         });
     };
+
+    const handleSignUpWithGoogle = async () => {
+        console.log("Sign Up With Google In Progress");
+    }
+
+    const handlePasswordVisibility = () => {
+        passwordVisibility === setPasswordVisibility(!passwordVisibility) 
+    }
     
     return (
         <>
             <div className="signUpMain">
                 <form onSubmit={submitHandler} className="signUpForm">
+                    <h2> Sign Up </h2>
                     <label> Name: </label>
                     <input type="text" name="name" className="signUpInputs" onChange={handleInputChange} />
 
                     <label> Email: </label>
                     <input type="text" name="email" className="signUpInputs" onChange={handleInputChange} />
 
-                    <label> Password </label>
-                    <input type="password" name="password" className="signUpInputs" onChange={handleInputChange} />
+                    <label> Password: </label>
+                    <div className="signUpPassword">
+                    <input type={passwordVisibility ? "text" : "password"} name="password" onChange={handleInputChange} className="register-password-input" />
+						<span className="register-password-icon"> 
+							{passwordVisibility ? (<img src="./password/eye-open.svg" onClick={() => setPasswordVisibility(false)} className="passwordImage"/>) : 
+								(<img src="./password/eye-closed.svg" onClick={() => setPasswordVisibility(true)} className="passwordImage" /> )}
+						</span>
+                    </div>
                     
-                    <label> Re-Enter Password </label>
+                    
+                    <label> Re-Enter Password: </label>
                     <input type="password" name="confirmPassword" className="signUpInputs" onChange={handleInputChange} />
 
-                    <label> Mobile Number </label>
+                    <label> Mobile Number: </label>
                     <input type="tel" name="phoneNumber" pattern="[0-9]{10}" className="signUpInputs" onChange={handleInputChange} />
 
-                    <button type="submit"> Sign Up </button>
+                    <div className="signUpPageButtons">
+                        <button type="submit" className="signUpButton"> Sign Up </button>
+                        <button onClick={handleSignUpWithGoogle} className="signUpWithGoogleButton"> Sign Up With Google </button>
+                    </div>
 
+                    <div className="backToLogin">
+                        <p> Log In </p>
+                    </div>
                     
                 </form>
             </div>
