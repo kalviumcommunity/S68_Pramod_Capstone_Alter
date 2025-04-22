@@ -2,14 +2,22 @@ import React from 'react'
 import "./Login.css"
 
 function Login() {
+
+    const submitHandler = (event) => {
+        event.preventDefault();
+
+        console.log("Log In Action Success")
+    }
+
     return (
         <>
             <div className="loginMain">
-                <form className="loginForm">
+                <form className="loginForm" onSubmit={submitHandler}>
                     <label> Email: </label>
-                    <input type="text" />
+                    <input type="text" className="inputMargins" name="email" />
                     <label> Password: </label>
-                    <input type="password" />
+                    <input type="password" name="password"/>
+                    <p className="forgotPassword"> Forgot Password? </p>
                     <button type="submit"> Login </button>
                 </form>
             </div>

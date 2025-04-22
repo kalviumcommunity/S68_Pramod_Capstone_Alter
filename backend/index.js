@@ -1,10 +1,14 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 app.use(express.json());
+app.use(cors())
 
 const connection = require("./src/database/database");
 const { uploadImage, getImageInfo } = require("./src/utils/cloudinary")
 const User = require("./src/controllers/user")
+
+
 
 require("dotenv").config({
     path: "./src/config/.env",

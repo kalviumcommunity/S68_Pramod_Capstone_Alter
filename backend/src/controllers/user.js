@@ -60,28 +60,29 @@ userRouter.get('/get-one-user', async (request, response) => {
 });
 
 userRouter.post("/create-user", async (request, response) => {
-    const { password } = request.body;
+    const { password, confirmPassword, ...rest } = request.body;
 
     const saltRounds = 10;
     const hashedPassword = await bcrypt.hash(password, saltRounds);
-
+    
     try {
         const newUser = new userModel({
-            ...request.body,
+            ...rest,
             password: hashedPassword,
         });
         await newUser.save();
-
+    
         return response.status(200).json({
             message: "user successfully created",
         });
-    }
+    } 
     catch (error) {
+        console.error("Error while creating user:", error);
         return response.status(500).json({
             message: "error creating user",
-            error: error
+            error: error,
         });
-    }
+    }    
 })
 
 userRouter.put('/update-address', async (request, response) => {
