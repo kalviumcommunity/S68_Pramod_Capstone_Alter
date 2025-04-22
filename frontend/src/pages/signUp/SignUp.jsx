@@ -15,16 +15,16 @@ function SignUp() {
             <div className="signUpMain">
                 <form onSubmit={submitHandler} className="signUpForm">
                     <label> Email: </label>
-                    <input type="text" name="email" id="signUpInputs" />
+                    <input type="text" name="email" className="signUpInputs" />
 
                     <label> Password </label>
-                    <input type="password" name="password" id="signUpInputs" />
+                    <input type="password" name="password" className="signUpInputs" />
                     
                     <label> Re-Enter Password </label>
-                    <input type="password" id="signUpInputs"/>
+                    <input type="password" className="signUpInputs"/>
 
                     <label> Mobile Number </label>
-                    <input type="tel" name="phone" pattern="[0-9]{10}" id="signUpInputs" />
+                    <input type="tel" name="phone" pattern="[0-9]{10}" className="signUpInputs" />
 
                     <button type="submit"> Sign Up </button>
 

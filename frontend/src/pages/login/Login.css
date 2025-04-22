@@ -21,11 +21,11 @@
     font-size: 0.8rem;
 }
 
-#inputMargins {
+.inputMargins {
     margin-bottom: 15px;
 }
 
-#forgotPassword {
+.forgotPassword {
     text-align: center;
     font-size: 0.7rem;
     margin-bottom: 20px;

@@ -14,10 +14,10 @@ function Login() {
             <div className="loginMain">
                 <form className="loginForm" onSubmit={submitHandler}>
                     <label> Email: </label>
-                    <input type="text" id="inputMargins" name="email" />
+                    <input type="text" className="inputMargins" name="email" />
                     <label> Password: </label>
                     <input type="password" name="password"/>
-                    <p id="forgotPassword"> Forgot Password? </p>
+                    <p className="forgotPassword"> Forgot Password? </p>
                     <button type="submit"> Login </button>
                 </form>
             </div>
