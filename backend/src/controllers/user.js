@@ -66,7 +66,6 @@ userRouter.post("/create-user", async (request, response) => {
     const hashedPassword = await bcrypt.hash(password, saltRounds);
     
     try {
-        console.log("Request received with body:", request.body);
         const newUser = new userModel({
             ...rest,
             password: hashedPassword,

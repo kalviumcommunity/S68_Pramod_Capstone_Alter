@@ -23,10 +23,14 @@ function SignUp() {
             return;
         }
 
-        const response = await axios.post(`${import.meta.env.VITE_LOCALHOST}/user/create-user`, userDetails);
-        console.log(response.data)
-        console.log("Sign Up Action Successful");
-        alert("Sign Up Action Successful");
+        try {
+            const response = await axios.post(`${import.meta.env.VITE_LOCALHOST}/user/create-user`, userDetails);
+            console.log("Sign Up Action Successful");
+            alert("Sign Up Action Successful");
+        }
+        catch (error) {
+            console.log("Client error creating user \n", error);
+        }
 
     }
 
