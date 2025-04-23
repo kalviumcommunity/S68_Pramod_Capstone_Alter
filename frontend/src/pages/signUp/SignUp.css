@@ -92,3 +92,7 @@
 .backToLogin:hover {
     color: #7e8dff;
 }
+
+.passwordImage {
+    width: 20px;
+}
