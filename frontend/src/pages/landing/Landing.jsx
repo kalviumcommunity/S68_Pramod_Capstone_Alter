@@ -23,7 +23,24 @@ function Landing() {
                         </div>
                     </div>
                     <div className="landerSignup">
-                        Sign Up
+                        <div className="landerSignupMain">
+                            <h2> Sign Up </h2>
+                            
+                            {/* Name */}
+                            <input type="text" name="name" placeholder="Name" className="signUpName" />
+                            
+                            {/* Email */}
+                            <input type="text" name="email" placeholder="Email" />
+                            
+                            {/* Password */}
+                            <input type="password" name="password" placeholder="Password" />
+                            
+                            {/* Confirm Password */}
+                            <input type="password" name="confirmPassword" placeholder="Confirm Password" />
+                            
+                            {/* Phone Number */}
+                            <input type="text" name="phoneNumber" placeholder="Phone Number" />
+                        </div>
                     </div>
                 </div>
                 <div className="landerFooter">
