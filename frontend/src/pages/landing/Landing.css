@@ -1,0 +1,103 @@
+.landerMainMain {
+    height: 100%;
+    width: 100%;
+    background: url("../../public/landingBackground.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbarMain {
+    /* background-color: blue; */
+    height: 10vh;
+    /* border-bottom: 2px solid rgb(0, 0, 0); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px;
+}
+
+.navbarLogo {
+    width: 10%;
+}
+
+.navbarLogoImage {
+    width: 100%;
+    margin-top: -25%;
+}
+
+.navbarOthers {
+    /* border: 2px solid blue; */
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbarAbout {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.navbarContact {
+    background: #AEFFFE;
+    border-radius: 40px;
+    border: none;
+    padding: 10px;
+    height: 65%;
+    width: 30%;
+    font-size: 1.1rem;
+}
+
+.landerMain {
+    border: 2px solid green;
+    height: 82vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.landerTexts {
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landerTextsBox {
+    /* background-color: #00ff33; */
+    width: 60%;
+    height: 50%;
+    margin-top: -10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landerTitle {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #00CCFF;
+    /* border: 2px solid black; */
+    height: 30%;
+    text-align: center;
+}
+
+
+.landerSubtext {
+    /* border: 2px solid red; */
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.landerSignup {
+    border: 2px solid yellow;
+}
+
+.landerFooter {
+    height: 8vh;
+}
