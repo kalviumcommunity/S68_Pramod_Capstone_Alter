@@ -1,7 +1,7 @@
 .landerMainMain {
     height: 100%;
     width: 100%;
-    background: url("landingBackground.png");
+    background: url("landingBackgroundWithText.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -39,72 +39,148 @@
 .navbarAbout {
     background: none;
     border: none;
+    border-radius: 40px;
+    border: none;
+    padding: 10px;
+    height: 65%;
+    width: 30%;
     font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.navbarAbout:hover {
+    background-color: #52ffb1;
 }
 
 .navbarContact {
-    background: #AEFFFE;
+    background-color: #AEFFFE;
+    border: 2px transparent;
     border-radius: 40px;
     border: none;
     padding: 10px;
     height: 65%;
     width: 30%;
     font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-.landerMain {
-    border: 2px solid green;
-    height: 82vh;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-
-.landerTexts {
-    border: 2px solid blue;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.landerTextsBox {
-    /* background-color: #00ff33; */
-    width: 80%;
-    height: 50%;
-    margin-top: -10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.landerTitle {
-    /* border: 2px solid red; */
-    font-size: 5.6rem;
-    font-weight: 800;
-    color: #00CCFF;
-    /* border: 2px solid black; */
-    height: 30%;
-    text-align: center;
-}
-
-
-.landerSubtext {
-    /* border: 2px solid red; */
-    text-align: right;
-    font-size: 1.8rem;
-    font-weight: 600;
+.navbarContact:hover {
+    background-color: #48fffc;
 }
 
 .landerSignup {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: end;
 }
 
-.landerSignupMain input {
+.landerSignUpMain {
+    border: 2px solid black;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #ffcad3; */
+    width: 22%;
+    height: 75%;
+    padding: 10px;
+    /* place-items: center; */
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.landerFormInputs {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    place-items: center;
+}
+
+.signUpInputs {
     background: none;
-    /* border-bottom: 2px solid black; */
+    border: none;
+    border-bottom: 1px solid black;
     outline: none;
+    width: 80%;
+    padding-left: 5px;
+    font-size: 0.8rem;
+    font-weight: 550;
+}
+
+.signUpInputs:focus {
+    /* border-bottom: 2px solid black; */
+    box-shadow: 0px 1px 0px black;
+}
+
+.landerSignUpButton {
+    background-color: #D5D9FF;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: 600;
+    width: 54%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.landerSignUpButton:hover {
+    background-color: #bdc3ff;
+}
+
+.landerGoogleSignUpButton {
+    background-color: #90FFCD;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: 600;
+    width: 75%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.landerGoogleSignUpButton:hover {
+    background-color: #52ffb1;
+}
+
+#backToLogin {
+    font-size: 0.8rem;
+    color: #296CC4;
+    cursor: pointer;
+}
+#backToLogin:hover {
+    color: #5984bc;
 }
 
 .landerFooter {
-    height: 8vh;
+    height: 5vh;
+    background-color: #2E2E2E;
+    display: flex;
+    flex-direction: row;
+}
+
+.footerRights {
+    width: 100%;
+    color: white;
+    font-size: 0.8rem;
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    place-items: center;
+}
+
+#rightsReserved {
+    margin-left: 12%;
+}
+
+.footerLogos {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

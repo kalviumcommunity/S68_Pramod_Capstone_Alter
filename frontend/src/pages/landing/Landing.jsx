@@ -14,38 +14,53 @@ function Landing() {
                         <button className="navbarContact"> Contact </button>
                     </div>
                 </div>
-
-                <div className="landerMain">
-                    <div className="landerTexts">
-                        <div className="landerTextsBox">
-                            <span className="landerTitle"> Welcome to Alter </span>
-                            <span className="landerSubtext"> Your go-to app for rides </span>
-                        </div>
-                    </div>
                     <div className="landerSignup">
-                        <div className="landerSignupMain">
-                            <h2> Sign Up </h2>
+                        <form className="landerSignUpMain">
+                            <h1> Sign Up </h1>
                             
-                            {/* Name */}
-                            <input type="text" name="name" placeholder="Name" className="signUpName" />
-                            
-                            {/* Email */}
-                            <input type="text" name="email" placeholder="Email" />
-                            
-                            {/* Password */}
-                            <input type="password" name="password" placeholder="Password" />
-                            
-                            {/* Confirm Password */}
-                            <input type="password" name="confirmPassword" placeholder="Confirm Password" />
-                            
-                            {/* Phone Number */}
-                            <input type="text" name="phoneNumber" placeholder="Phone Number" />
+                            <div className="landerFormInputs">
+                                {/* Name */}
+                                <input type="text" name="name" placeholder="Name" className="signUpInputs" />
+                                
+                                {/* Email */}
+                                <input type="text" name="email" placeholder="Email" className="signUpInputs" />
+                                
+                                {/* Password */}
+                                <input type="password" name="password" placeholder="Password" className="signUpInputs" />
+                                
+                                {/* Confirm Password */}
+                                <input type="password" name="confirmPassword" placeholder="Confirm Password" className="signUpInputs" />
+                                
+                                {/* Phone Number */}
+                                <input type="text" name="phoneNumber" placeholder="Phone Number" className="signUpInputs" />
+                            </div>
+
+                            <br />
+
+                            {/* Sign Up Button */}
+                            <button type="submit" className="landerSignUpButton"> Sign Up </button>
+
+                            <button className="landerGoogleSignUpButton"> Sign Up With Google </button>
+
+                            <p id="backToLogin"> Log In </p>
+                        </form>
+                    </div>
+                {/* <div className="landerFooter">
+                    <div className="footerRights">
+                        <p id="rightsReserved">
+                            2025 Alter. All Rights Reserved
+                        </p>
+                        <div className="footerLogos">
+                            <img src="./githubIconWhite.svg" style={{
+                                width: "15%"
+                            }} />
+                            <img src="./linkedinIcon.svg" style={{
+                                width: "15%"
+                            }} />
+
                         </div>
                     </div>
-                </div>
-                <div className="landerFooter">
-                    
-                </div>
+                </div> */}
             </div>
         </>
     )
