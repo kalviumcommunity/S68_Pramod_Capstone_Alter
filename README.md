@@ -19,13 +19,3 @@ This ride-sharing app is designed to offer convenient and efficient transportati
 2. Real-Time Ride Matching - GPS-based ride requests that match riders with the nearest available driver. 
 3. Fare Calculation & Payment Integration - Distance and demand-based dynamic pricing. 
 4. Ratings System - User ratings for both drivers and riders.
-
-### Daily Plan 
-- Day 1: Came up with the idea.
-- Day 2: Come up with more features.
-- Day 3: Create a low fidelity design.
-- Day 4: Create a high fidelity design.
-- Day 5: Finalize Design, and make any necessary changes.
-- Day 6: Set up Github.
-- Day 7: Set up initial server.
-- Day 8 onwards, to be planned.
