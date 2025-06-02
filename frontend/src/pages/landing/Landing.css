@@ -1,186 +1,295 @@
-.landerMainMain {
-    height: 100%;
-    width: 100%;
-    background: url("landingBackgroundWithText.png");
+.landerOne {
+    background-image: url("./mainBG.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    width: 99vw;
+    height: 100vh;
+    position: relative;
+    /* display:  */
 }
 
-.navbarMain {
-    /* background-color: blue; */
+.landerBookRide {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     height: 10vh;
-    /* border-bottom: 2px solid rgb(0, 0, 0); */
+    width: 20%;
+    padding: 10px;
+    /* background-color: green; */
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    box-shadow: 0px 0px 5px;
-}
-
-.navbarLogo {
-    width: 10%;
-}
-
-.navbarLogoImage {
-    width: 100%;
-    margin-top: -25%;
-}
-
-.navbarOthers {
-    /* border: 2px solid blue; */
-    width: 25%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
-
-.navbarAbout {
+.bookARideButton {
+    width: 50%;
+    height: 70%;
     background: none;
-    border: none;
-    border-radius: 40px;
-    border: none;
-    padding: 10px;
-    height: 65%;
-    width: 30%;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 700; 
+    background: linear-gradient(to right, #b8f4ff 50%, rgb(81, 255, 223) 10%) right;
+    background-size: 200% 100%;
+    background-position: left;
+    transition: 0.2s ease;
     cursor: pointer;
-    transition: 0.4s;
 }
 
-.navbarAbout:hover {
-    background-color: #52ffb1;
+.bookARideButton:hover {
+    /* background-color: #b8f4ff; */
+    background: linear-gradient(to left, rgb(81, 255, 223) 50%, #b8f4ff 50%) right;
+    background-size: 200% 100%;
+    color: rgb(55, 55, 55);
 }
 
-.navbarContact {
-    background-color: #AEFFFE;
-    border: 2px transparent;
-    border-radius: 40px;
-    border: none;
-    padding: 10px;
-    height: 65%;
-    width: 30%;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: 0.2s;
+.bookARideButton:active {
+    transition: 0.1s;
+    border: 2px solid rgb(255, 255, 255);
 }
 
-.navbarContact:hover {
-    background-color: #48fffc;
-}
-
-.landerSignup {
-    /* border: 2px solid yellow; */
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    justify-content: end;
-}
-
-.landerSignUpMain {
-    border: 2px solid black;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    /* background-color: #ffcad3; */
-    width: 22%;
-    height: 75%;
-    padding: 10px;
-    /* place-items: center; */
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    margin-right: 5%;
-}
-
-.landerFormInputs {
+.landerTwo {
+    /* background-color: blue; */
+    width: 99vw;
+    height: 80vh;
     display: grid;
-    gap: 20px;
+    grid-template-columns: 0.5fr 1fr;
+}
+
+.twoLeft {
     width: 100%;
-    place-items: center;
+    background-color: #77FFBB;
+    display: grid;
+    grid-template-rows: 1fr 0.17fr;
 }
 
-.signUpInputs {
+.twoLeftImage {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.twoLeftButton {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.twoLeftSignUp {
+    color: #0088FF;
+    margin-right: 2vw;
+    width: 25%;
+    height: 60%;
     background: none;
+    font-size: 1rem;
+    font-weight: 700; 
+    background: linear-gradient(to right, #77FFBB 50%, #0088FF 10%) right;
+    background-size: 200% 100%;
+    background-position: left;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.twoLeftSignUp:hover {
+    background: linear-gradient(to left, #0088FF 50%, #77FFBB 10%) right;
+    background-size: 200% 100%;
+    color: rgb(30, 255, 0);
+}
+
+.twoLeftSignUp:active {
+    transition: 0.1s;
+    border: 2px solid white;
+}
+
+.twoRight {
+    width: 100%;
+    background-color: #0088FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.twoRightBox {
+    position: relative;
+    border: 2px solid white;
+    border-radius: 12px;
+    width: 60%;
+    height: 60%;
+}
+
+.twoRightText {
+    /* border: 2px solid black; */
+    padding: 50px;
+    color: #77FFBB;
+}
+
+.twoRightViewDiv {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* border: 1px solid purple; */
+    width: 25%;
+    height: 15%;
+    margin-right: 2vw;
+    margin-bottom: 1vw;
+}
+
+.twoRightViewMore {
+    color: #77FFBB;
+    border: 2px solid white;
+    width: 100%;
+    height: 100%;
+    background: none;
+    font-size: 1rem;
+    font-weight: 700; 
+    background: linear-gradient(to right, #0088FF 50%, #77FFBB 10%) right;
+    background-size: 200% 100%;
+    background-position: left;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.twoRightViewMore:hover {
+    background: linear-gradient(to left, #77FFBB 50%, #0088FF 10%) right;
+    background-size: 200% 100%;
+    color: #0088FF;
+}
+
+.twoRightViewMore:active {
+    transition: 0.1s;
+    border: 2px solid black;
+}
+
+
+.landerThree {
+    background-color: #FFFBC0;
+    width: 99vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.threeBox {
+    background-color: #FFFFFF;
+    border: 2px solid black;
+    border-radius: 12px;
+    width: 60%;
+    height: 75%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.threeMainContent {
+    /* border: 2px solid green; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 99%;
+    height: 75%;
+    /* padding: 10px; */
+}
+
+.threeRideForm {
+    /* border: 2px solid black; */
+    display: grid;
+    padding: 25px;
+    gap: 25px;
+}
+
+.threeRideForm input {
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 85%;
+    font-size: 0.9rem;
     outline: none;
-    width: 80%;
-    padding-left: 5px;
-    font-size: 0.8rem;
-    font-weight: 550;
 }
 
-.signUpInputs:focus {
-    /* border-bottom: 2px solid black; */
-    box-shadow: 0px 1px 0px black;
+.threeRideForm input:focus {
+    border-bottom: 2px solid rgb(152, 152, 152);
 }
 
-.landerSignUpButton {
-    background-color: #D5D9FF;
-    border: none;
-    border-radius: 30px;
-    padding: 10px;
-    font-weight: 600;
-    width: 54%;
-    cursor: pointer;
-    transition: 0.2s;
+.rideFormDates {
+    /* border: 2px solid green; */
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.landerSignUpButton:hover {
-    background-color: #bdc3ff;
+.rideFormDates input {
+    width: 30%;
+    outline: none;
 }
 
-.landerGoogleSignUpButton {
-    background-color: #90FFCD;
-    border: none;
-    border-radius: 30px;
-    padding: 10px;
-    font-weight: 600;
-    width: 75%;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.landerGoogleSignUpButton:hover {
-    background-color: #52ffb1;
-}
-
-#backToLogin {
-    font-size: 0.8rem;
-    color: #296CC4;
+.threeRideConfirmation {
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 20px;
+    width: 100%;
+    height: 75%;
+    font-weight: 700;
+    background: none;
+    background: linear-gradient(to right, #c8ffce 50%, #59ff6c 10%) right;
+    background-size: 200% 100%;
+    background-position: left;
+    transition: 0.2s ease;
     cursor: pointer;
 }
-#backToLogin:hover {
-    color: #5984bc;
+
+.threeRideConfirmation:hover {
+    background: linear-gradient(to left, #59ff6c 50%, #c8ffce 10%) right;
+    background-size: 200% 100%;
+    /* color: #ff0000; */
 }
+
+.threeRideMap {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .landerFooter {
-    height: 5vh;
     background-color: #2E2E2E;
-    display: flex;
-    flex-direction: row;
-}
-
-.footerRights {
-    width: 100%;
-    color: white;
-    font-size: 0.8rem;
+    width: 99vw;
+    height: 35vh;
     display: grid;
-    grid-template-columns: 1fr 0.1fr;
-    place-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
 }
 
-#rightsReserved {
-    margin-left: 12%;
+.footerSubs {
+    /* border: 2px solid white; */
+    padding: 10px;
+    margin-left: 20%;
 }
 
-.footerLogos {
-    width: 100%;
+.footerSubs p {
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.footerSubs p:hover {
+    text-decoration: underline;
+    color: #77FFBB;
+}
+
+.footerSocialsDivs {
+    width: 32%;
+    /* border: 2px solid white; */
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+}
+
+#linkedIn:hover {
+    color: #0088ff;
+}
+
+#github:hover {
+    color: #777777;
 }
