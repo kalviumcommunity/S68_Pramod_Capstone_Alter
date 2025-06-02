@@ -41,14 +41,13 @@ function Landing() {
             </div>
             <div className="landerThree">
                 <div className="threeBox">
-                    <div style={{ paddingLeft: "50px", width: "100%"}}>
+                    <div style={{ paddingLeft: "50px", width: "100%", fontSize: "1vw" }}>
                         <h1> Book A Ride </h1>
                     </div>
                     <div className="threeMainContent">
                         <div className="threeRideForm">
                             <input type="text" name="pickUp" placeholder="Pick Up Location" /> 
                             <input type="text" name="dropOff" placeholder="Drop Off Location" />
-                            <input type="text" name="mobileNumber" placeholder="Mobile Number" />
                             <div className="rideFormDates">
                                 <input type="date" name="date" placeholder="Date" 
                                     style={{ width: "45%" }}
@@ -91,10 +90,14 @@ function Landing() {
                     <div className="footerSubs">
                         <h4> Socials</h4>
                             <p id="linkedIn">
-                                Linkedin 
+                                <a href="https://www.linkedin.com/in/pramod-magesh-38abb7297/" target="_blank">
+                                    Linkedin 
+                                </a>
                             </p>
                             <p id="github">
-                                Github
+                                <a href="https://github.com/kora07" target="_blank">
+                                    Github
+                                </a>
                             </p>
                     </div>
                 </div>

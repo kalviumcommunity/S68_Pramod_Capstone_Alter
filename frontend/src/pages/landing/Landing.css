@@ -1,3 +1,7 @@
+a {
+    all: unset;
+}
+
 .landerOne {
     background-image: url("./mainBG.png");
     background-repeat: no-repeat;
@@ -26,7 +30,8 @@
     width: 50%;
     height: 70%;
     background: none;
-    font-size: 1rem;
+    border-radius: 1000px;
+    font-size: 1vw;
     font-weight: 700; 
     background: linear-gradient(to right, #b8f4ff 50%, rgb(81, 255, 223) 10%) right;
     background-size: 200% 100%;
@@ -82,7 +87,8 @@
     width: 25%;
     height: 60%;
     background: none;
-    font-size: 1rem;
+    border-radius: 1000px;
+    font-size: 1vw;
     font-weight: 700; 
     background: linear-gradient(to right, #77FFBB 50%, #0088FF 10%) right;
     background-size: 200% 100%;
@@ -122,6 +128,7 @@
     /* border: 2px solid black; */
     padding: 50px;
     color: #77FFBB;
+    font-size: 1.5vw;
 }
 
 .twoRightViewDiv {
@@ -141,7 +148,7 @@
     width: 100%;
     height: 100%;
     background: none;
-    font-size: 1rem;
+    font-size: 1vw;
     font-weight: 700; 
     background: linear-gradient(to right, #0088FF 50%, #77FFBB 10%) right;
     background-size: 200% 100%;
@@ -204,7 +211,7 @@
     border: none;
     border-bottom: 2px solid black;
     width: 85%;
-    font-size: 0.9rem;
+    font-size: 0.9vw;
     outline: none;
 }
 
@@ -225,7 +232,7 @@
 }
 
 .threeRideConfirmation {
-    font-size: 1rem;
+    font-size: 1vw;
     border: 2px solid black;
     border-radius: 20px;
     margin-top: 20px;
@@ -243,7 +250,11 @@
 .threeRideConfirmation:hover {
     background: linear-gradient(to left, #59ff6c 50%, #c8ffce 10%) right;
     background-size: 200% 100%;
-    /* color: #ff0000; */
+}
+
+.threeRideConfirmation:active {
+    background: linear-gradient(to left, #00ff1e 50%, #59ff6e 10%) right;
+    background-size: 200% 100%;
 }
 
 .threeRideMap {
@@ -270,8 +281,13 @@
     margin-left: 20%;
 }
 
+.footerSubs h4 {
+    font-size: 1vw;
+}
+
 .footerSubs p {
-    font-size: 0.7rem;
+    width: fit-content;
+    font-size: 0.7vw;
     cursor: pointer;
 }
 
