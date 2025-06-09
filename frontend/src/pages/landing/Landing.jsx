@@ -1,89 +1,152 @@
 import React from 'react'
+import { useState } from "react";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 import "./Landing.css"
 
 function Landing() {
+
+    const [startDate, setStartDate] = useState(new Date());
+    
     return (
         <>
-            <div className="landerOne">
-                {/* Background of Landing Page */}
-                {/* <div className="landingFiller">
-                    
-                </div> */}
-                <div className="landerBookRide">
-                    <button className="bookARideButton">
-                        Book A Ride
-                    </button>
+            {/* Navbar */}
+            <div className="navbar">
+                <div className="navbarTitle">
+                    <h1> ALTER </h1>
+                </div>
+                <div className="navbarButtons">
+                    <button className="navbarOthers"> About Us </button>
+                    <button className="navbarOthers"> Log In </button>
+                    <button className="navbarSignUp"> Sign Up </button>
                 </div>
             </div>
-            <div className="landerTwo">
-                <div className="twoLeft">
-                    <div className="twoLeftImage">
-                        <img src="./image1.png" style={{ width: "60%" }}/>
-                    </div>
-                    <div className="twoLeftButton">
-                        <button className="twoLeftSignUp"> Sign Up </button>
-                    </div>
-                </div>
-                <div className="twoRight">
-                    <div className="twoRightBox">
-                        <h2 className="twoRightText"> 
-                            Alter is a modern ride-hailing app build for speed, safety, and simplicity.
-                            <br /> <br />
-                            From everyday rides to premium options, Alter puts your journey first - because moving should be effortless.
-                        </h2>
-                        <div className="twoRightViewDiv">
-                            <button className="twoRightViewMore">
-                                View More
+
+            {/* Main Body */}
+            <div className="landingOrderARide">
+                <div className="orderARideMain">
+                    <div className="orderLeft">
+                        <h2> Order A Ride </h2>
+                        <div className="orderInputs">
+                            <div style={{ position: "relative" }}>
+                                <input type="text" placeholder="Pick Up Location" className="orderInputBoxes" />
+                                <img src="./navigation.svg" className="navigationImage" />
+                            </div>
+                            <div style={{ position: "relative" }}>
+                                <input type="text" placeholder="Drop Off Location" className="orderInputBoxes" />
+                                <img src="./navigation.svg" className="navigationImage" />
+                            </div>
+                        </div>
+
+                        <div className="mainRidePrices">
+                            <span style={{ fontWeight: "600" }}> Prices </span> <br />
+                            <div className="pricesButtons">
+                                <input type="radio" id="mini" name="prices" hidden />
+                                <label htmlFor="mini" className="pricesOptions">
+                                    <div className="mainPriceSub">
+                                        <div style={{ 
+                                            display: "flex", 
+                                            justifyContent: "center",
+                                            alignItems: "center"
+                                         }}>
+                                            <img src="./smallCar.svg" 
+                                                style={{ width: "60%" }}
+                                            />
+                                        </div>
+                                        <div className="subPriceMid">
+                                            <p>
+                                                <span style={{
+                                                    fontSize: "1vw",
+                                                    fontWeight: "600"
+                                                }}> Mini </span> <br />
+                                                <span style={{
+                                                    fontSize: "0.9vw"
+                                                }}>
+                                                    5 minutes to pickup
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p style={{ fontSize: "0.9vw", fontWeight: "600" }}>
+                                                $19.99
+                                            </p>
+                                        </div>
+                                    </div>    
+                                </label>
+                                
+                                <input type="radio" id="xl" name="prices" hidden />
+                                <label htmlFor="xl" className="pricesOptions"> 
+                                    <div className="mainPriceSub">
+                                        <div style={{ 
+                                            display: "flex", 
+                                            justifyContent: "center",
+                                            alignItems: "center"
+                                         }}>
+                                            <img src="./jeep.svg" 
+                                                style={{ width: "60%" }}
+                                            />
+                                        </div>
+                                        <div className="subPriceMid">
+                                            <p>
+                                                <span style={{
+                                                    fontSize: "1vw",
+                                                    fontWeight: "600"
+                                                }}> XL </span> <br />
+                                                <span style={{
+                                                    fontSize: "0.9vw"
+                                                }}>
+                                                    Unavailable
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p style={{ fontSize: "0.9vw", fontWeight: "600" }}>
+                                                $19.99
+                                            </p>
+                                        </div>
+                                    </div> 
+                                </label>
+                            </div>
+                        </div>
+
+                        <div className="confirmBooking">
+                            <button className="confirmBookingButton">
+                                Confirm Booking
                             </button>
                         </div>
                     </div>
+                    <div className="orderRight">
+                        <div style={{ position: "relative" }}>
+                            <img src="oneBGNew.png" 
+                                style={{ width: "100%" }}
+                            />
+                            <p id="shutterstockRefOne">
+                                Image By
+                                <a href="https://www.shutterstock.com/image-vector/corporate-transport-isolated-concept-vector-illustration-2191086613"> 
+                                    Shutterstock
+                                </a> 
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="landerThree">
-                <div className="threeBox">
-                    <div style={{ paddingLeft: "50px", width: "100%", fontSize: "1vw" }}>
-                        <h1> Book A Ride </h1>
-                    </div>
-                    <div className="threeMainContent">
-                        <div className="threeRideForm">
-                            <input type="text" name="pickUp" placeholder="Pick Up Location" /> 
-                            <input type="text" name="dropOff" placeholder="Drop Off Location" />
-                            <div className="rideFormDates">
-                                <input type="date" name="date" placeholder="Date" 
-                                    style={{ width: "45%" }}
-                                />
-                                <input type="time" name="time" placeholder="Time" />
-                            </div>
 
-                            <button className="threeRideConfirmation"> Confirm Ride </button>
-                        </div>
-                        <div className="threeRideMap">
-                            {/* Placeholder Image, to be replaced with a working map that lets 
-                                you choose any point as pick up or drop off location */}
-                            <img src="./mapImage.png" style={{ 
-                                width: "75%"
-                             }} />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="landerFooter">
+            {/* Footer */}
+
+            {/* <div className="landerFooter">
                 <div className="companyAndInformation">
                     <div className="footerSubs">
-                        <h4> Company & Information</h4>
+                        <h4> Information</h4>
                         <p> About Us </p>
-                        <p> Careers </p>
                     </div>
                 </div>
                 <div className="supportAndHelp">
                     <div className="footerSubs">
                         <h4> Support & Help</h4>
                         <p> Help Center </p>
-                        <p> Contact Us </p>
-                        <p> Report An Issue </p>
-                        <p> FAQs </p>
-                        <p> Community Guidelines </p>
                         <p> How It Works </p>
+                        <p> Contact Us </p>
                     </div>
                 </div>
                 <div className="socials">
@@ -110,7 +173,7 @@ function Landing() {
                         <p> Safety & Security </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }
